@@ -1,0 +1,572 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+:root {
+  --text-color: rgb(94, 92, 92);
+  --title-color: black;
+  --nav-top-color: #7f8487;
+  --services-card-color: #222831;
+  --portfolio-nav-color: #141414;
+  --portfolio-nav-bg-color: white;
+  --portfolio-footer-bg-color: white;
+  --portfolio-text-color: var(--text-color);
+  --portfolio-card-title-color: #1e1e1e;
+  --border-card: none;
+  --shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  --footer-bg: #0d0f14;
+  --radius: 4px;
+  --bg-color: white;
+  --main-text-color: DarkSlateGrey;
+  --accent-color: MediumBlue;
+  --secondary-text-color: GhostWhite;
+  --main-color: GhostWhite;
+  --sun-color: DarkKhaki;
+  --moon-color: LightSteelBlue;
+}
+html {
+}
+body {
+  background: var(--bg-color);
+}
+.content-principal {
+  margin-bottom: 50px;
+}
+/**
+ * Titles y hr
+ */
+.title {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.title h2 {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  color: var(--title-color);
+}
+.title hr {
+  font-size: 20px;
+  width: 5%;
+  margin: 0px auto;
+  border-radius: 20%;
+  background-color: blue;
+  border: 2px solid blue;
+}
+
+.navbar-top {
+  padding: 2px;
+  background-color: var(--nav-top-color);
+  height: 100%;
+  display: none;
+}
+.navbar-top ul {
+  list-style: none;
+  justify-content: end;
+  margin: 0px;
+}
+.navbar-top ul li {
+  margin: 10px 15px 10px 0px;
+  color: white;
+}
+.navbar {
+  background-color: #f1eee9;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+.navbar-menu ul {
+  list-style: none;
+  margin: 0px;
+  display: none;
+  background-color: #f1eee9;
+}
+.navbar-menu ul li {
+  display: inline-block;
+  margin: 10px;
+  background-color: #f1eee9;
+}
+.navbar-menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+.navbar-menu ul li a:hover {
+  border-bottom: 2px solid #6d9886;
+  transition: all 0.1s;
+}
+.navbar .navbar-brand span {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+}
+.navbar-menu input:checked ~ ul {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  text-align: center;
+}
+.navbar-menu input {
+  display: none;
+}
+.navbar-menu label {
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.navbar.pined {
+  position: fixed;
+  top: 0px;
+}
+/**
+ * The following styles are for the header image
+ */
+.header {
+  height: 500px;
+  width: 100%;
+  background-image: url("/assets/img/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.header .container {
+  text-align: center;
+  color: #eaf6f6;
+  margin: 0px auto;
+  font-family: "Oswald", sans-serif;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 150px;
+}
+.header-content h1 {
+  font-size: 70px;
+}
+.header-content p {
+  font-size: 18px;
+  margin: 10px;
+}
+.header-content hr {
+  width: 50%;
+  border: 2px solid #cacaca;
+  margin: auto;
+  border-radius: 50%;
+}
+/**
+ * The following styles are for the about section
+ */
+.about {
+  padding: 10px;
+}
+.about .container {
+  display: flex;
+  padding: 20px;
+}
+.about .about-img {
+  display: flex;
+  margin-top: 10px;
+}
+.about .about-img img {
+  border: none;
+  width: 30%;
+  height: 180px;
+  border-radius: 50%;
+}
+.about .about-img ul {
+  list-style: none;
+  margin: 5px auto auto 25px;
+  padding: 5px;
+}
+.about .about-img ul li {
+  display: block;
+  margin: 5px;
+}
+.about .about-img ul li span {
+  color: var(--text-color);
+  font-size: 14px;
+  margin-top: 10px;
+}
+.about .about-skill h5 {
+  color: var(--text-color);
+}
+.about .about-skill ul {
+  list-style: none;
+}
+.about .about-skill ul li {
+  padding: 0px;
+  margin: 0px;
+}
+.about .about-skill span {
+  font-size: 13px;
+  color: var(--text-color);
+}
+.about .about-skill .progress {
+  margin: 0px auto;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #f1eee9;
+  border: none;
+  font-size: 12px;
+  height: 6px;
+}
+.about .about-profile {
+  padding: 20px;
+  margin: 0px 20px;
+}
+.about .about-profile p {
+  font-size: 14px;
+  color: var(--text-color);
+}
+/** Fin de about */
+
+/* The CSS for the notes section. */
+.notes {
+  justify-content: center;
+  align-items: center;
+  background-image: url("/assets/img/pexels-good-free-photoscom-1421837.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  word-wrap: break-word;
+  margin: 20px 0px 20px 0px;
+}
+.notes p {
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  font-weight: bold;
+}
+/** Fin de notes */
+.content-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 10% 15px 10%;
+  padding: 5px;
+}
+.card-one {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.card-one .card-body {
+  margin: 10px auto;
+}
+.card-one .card-text {
+  font-size: 12.5px;
+  margin: 10px 30px 10px 30px;
+  color: var(--text-color);
+  word-wrap: break-word;
+}
+.card-one .card-header li {
+  font-size: 50px;
+  margin: 15px auto;
+  color: var(--services-card-color);
+}
+.card-one .card-body .card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 8px;
+  font-family: "Oswald", sans-serif;
+  color: var(--services-card-color);
+}
+
+/**
+ * The following styles are for the summary section
+ */
+
+.summary {
+  margin: 5% 0px 5% 0px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: var(--nav-top-color);
+  color: white;
+  padding: 50px;
+  width: 100%;
+  height: auto;
+}
+/* The CSS for the portfolio section. */
+
+.portfolio .card-three {
+  border: var(--border-card);
+  box-shadow: var(--shadow);
+  border-radius: 0px;
+  margin: 5% auto;
+}
+.portfolio .card-three .card-img-top {
+  height: 200px;
+  overflow: hidden;
+}
+.portfolio .card-three .card-img-top img {
+  height: 200px;
+  width: 400px;
+  transition: 0.8s all ease-in-out;
+}
+.portfolio .card-three .card-img-top:hover img {
+  transform: scale(1.5);
+}
+
+.portfolio .card-three .card-content {
+  padding: 10px;
+  text-align: left;
+}
+.portfolio .card-three .card-title {
+  font-size: 1rem;
+  color: var(--portfolio-card-title-color);
+  font-weight: 500;
+}
+.portfolio .card-three .card-text {
+  color: var(--portfolio-text-color);
+  font-size: 14px;
+  margin: 0px;
+}
+.portfolio .card-three .card-text ul {
+  list-style: none;
+  margin: -5px 5px 0px 0px;
+  padding: 0px;
+}
+.portfolio .card-three .card-text ul li {
+  display: inline-block;
+  margin: 0px;
+  font-size: 15px;
+  text-transform: lowercase;
+}
+.portfolio .card-three .card-footer {
+  border: none;
+  padding: 0px;
+  background-color: var(--portfolio-footer-bg-color);
+  color: var(--portfolio-text-color);
+  font-size: 0.9rem;
+  margin: 10px 0px 10px 0px;
+}
+.portfolio .card-three .card-footer ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+.portfolio .card-three .card-footer ul li a {
+  text-decoration: none;
+  background-color: rgb(0, 98, 116);
+  padding: 2px 5px 4px 5px;
+  color: white;
+}
+
+.portfolio .card-three .card-footer .list-item-time {
+  margin-left: 85px;
+}
+
+.portfolio-menu {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.portfolio-menu button {
+  border: none;
+  padding: 5px;
+  margin: 10px;
+  background-color: var(--portfolio-nav-bg-color);
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--portfolio-nav-color);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.portfolio-menu button.mixitup-control-active {
+  background-color: rgb(0, 102, 109);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
+  color: white;
+}
+/** Fin de portfolio */
+
+/**
+ * The following styles are for the reviews section
+ */
+/* The CSS for the reviews section. */
+/**
+.tns-nav {
+  text-align: center;
+}
+.tns-controls {
+  display: none;
+}
+.tns-nav button {
+  background-color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px;
+  margin: 5px 5px 15px 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+  transition: all 0.4s;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.tns-nav .tns-nav-active {
+  background-color: var(--text-color);
+  color: white;
+}
+**/
+/* Footer */
+.footer {
+  background: var(--footer-bg);
+  padding: 20px 0;
+  color: #fff;
+  text-align: left;
+}
+.footer .container {
+  margin-top: 16px;
+}
+.footer h6 {
+  font-size: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer ul li {
+  margin-right: 20px;
+  font-size: 15px;
+}
+.footer ul li a {
+  color: gray;
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
+}
+.footer-social-media span {
+  font-size: 15px;
+}
+.footer-social-media .small {
+  color: white;
+  margin-top: 14px;
+}
+/* Fin footer */
+
+.navbar-menu ul li:nth-child(6) a {
+  color: black;
+  background-color: rgb(221, 221, 0);
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+.dark-mode-controls {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.dark-toggle {
+  display: none;
+}
+svg {
+  height: 1rem;
+}
+svg.sun {
+  fill: var(--sun-color);
+}
+svg.moon {
+  fill: var(--moon-color);
+}
+.dark-toggle + label {
+  --height-control: 1rem;
+  display: inline-block;
+  width: calc(var(--height-control) * 2);
+  height: var(--height-control);
+  background-color: var(--main-color);
+  position: relative;
+  border-radius: calc(var(--radius) * 2);
+}
+.dark-toggle + label::after {
+  --circle-size: calc(var(--height-control) * 1.33);
+  position: absolute;
+  content: "";
+  width: var(--circle-size);
+  height: var(--circle-size);
+  left: calc((var(--circle-size) - var(--height-control)) * -1);
+  top: calc((var(--circle-size) - var(--height-control)) / 2 * -1);
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  transition: all 0.4s ease-in;
+}
+.dark-toggle:checked + label::after {
+  left: calc(100% - (var(--circle-size) - var(--height-control) / 2));
+}
+
+/* Setting the default color scheme to dark mode. */
+@media (prefers-color-scheme: dark), (prefers-color-scheme: no-prefence) {
+  body:not(.force-light) {
+    --bg-color: #0d1b1e;
+    --main-color: #0b3c49;
+    --accent-color: Purple;
+    --secondary-text-color: Lavender;
+    --main-text-color: AliceBlue;
+    --sun-color: #faea48;
+  }
+}
+
+body.force-dark {
+  --bg-color: #0d1b1e;
+  --main-color: #0b3c49;
+  --accent-color: Purple;
+  --secondary-text-color: Lavender;
+  --main-text-color: AliceBlue;
+  --sun-color: #faea48;
+
+  --text-color: white; /**About, Services**/
+  --title-color: white; /**About, Services**/
+  --nav-top-color: var(--bg-color);
+  --services-card-color: gray;
+  --portfolio-nav-bg-color: var(--services-card-color);
+  --portfolio-footer-bg-color: var(--bg-color);
+  --portfolio-text-color: AliceBlue;
+  --shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16),
+    0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+  --portfolio-card-title-color: AliceBlue;
+  --footer-bg: var(--bg-color);
+}
+
+@media (max-width: 425px) {
+  .navbar-menu ul li:nth-child(6) a {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .navbar-menu input,
+  label {
+    display: none;
+  }
+  .navbar ul {
+    display: inline;
+  }
+
+  .navbar-top {
+    display: block;
+  }
+}
