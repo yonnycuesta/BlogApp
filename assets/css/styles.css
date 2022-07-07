@@ -29,6 +29,7 @@
   --moon-color: LightSteelBlue;
 }
 html {
+  scroll-behavior: smooth;
 }
 body {
   background: var(--bg-color);
@@ -518,7 +519,7 @@ svg.moon {
 }
 
 /* Setting the default color scheme to dark mode. */
-@media (prefers-color-scheme: dark), (prefers-color-scheme: no-prefence) {
+@media (prefers-color-scheme: light), (prefers-color-scheme: no-prefence) {
   body:not(.force-light) {
     --bg-color: #0d1b1e;
     --main-color: #0b3c49;
