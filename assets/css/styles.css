@@ -18,6 +18,7 @@
   --portfolio-card-title-color: #1e1e1e;
   --call-btn-color: #FCD900;
   --border-card: none;
+  --border-footer: none;
   --shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   --footer-bg: #0d0f14;
   --radius: 4px;
@@ -241,6 +242,7 @@ body {
   display: flex;
   word-wrap: break-word;
   margin: 20px 0px 20px 0px;
+  padding: 10px;
 }
 .notes p {
   font-size: 17px;
@@ -403,6 +405,7 @@ body {
   padding: 20px 0;
   color: #fff;
   text-align: left;
+  border-top: var(--border-footer);
 }
 .footer .container {
   margin-top: 16px;
@@ -517,6 +520,7 @@ body.force-dark {
   --portfolio-card-title-color: AliceBlue;
   --footer-bg: var(--bg-color);
   --call-btn-color: var(--bg-color);
+  --border-footer: 1px solid gray;
 }
 
 @media (max-width: 425px) {
@@ -525,7 +529,7 @@ body.force-dark {
   }
 }
 
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   .navbar-menu input,
   label {
     display: none;
@@ -533,7 +537,6 @@ body.force-dark {
   .navbar ul {
     display: inline;
   }
-
   .navbar-top {
     /*display: block;*/
   }
