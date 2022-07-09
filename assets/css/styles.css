@@ -131,12 +131,12 @@ body {
  * The following styles are for the header image
  */
 .header {
-  height: 500px;
-  width: 100%;
   background-image: url("/assets/img/h1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 35vw;
+  width: 100%;
 }
 .header .container {
   text-align: center;
