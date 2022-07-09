@@ -3,7 +3,7 @@
   margin: 0px;
   box-sizing: border-box;
 }
-
+/* Importanto fuentes*/
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 :root {
@@ -537,8 +537,5 @@ body.force-dark {
   }
   .navbar ul {
     display: inline;
-  }
-  .navbar-top {
-    /*display: block;*/
   }
 }
