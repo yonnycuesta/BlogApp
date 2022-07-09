@@ -16,16 +16,15 @@
   --portfolio-footer-bg-color: white;
   --portfolio-text-color: var(--text-color);
   --portfolio-card-title-color: #1e1e1e;
+  --call-btn-color: #FCD900;
   --border-card: none;
   --shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   --footer-bg: #0d0f14;
   --radius: 4px;
   --bg-color: white;
-  --main-text-color: DarkSlateGrey;
-  --accent-color: MediumBlue;
-  --secondary-text-color: GhostWhite;
+  --accent-color: var(--sun-color);
   --main-color: GhostWhite;
-  --sun-color: DarkKhaki;
+  --sun-color: yellow;
   --moon-color: LightSteelBlue;
 }
 html {
@@ -63,7 +62,7 @@ body {
   padding: 2px;
   background-color: var(--nav-top-color);
   height: 100%;
-  display: none;
+  display: block;
 }
 .navbar-top ul {
   list-style: none;
@@ -232,7 +231,7 @@ body {
 .notes {
   justify-content: center;
   align-items: center;
-  background-image: url("/assets/img/pexels-good-free-photoscom-1421837.jpg");
+  background-image: url("/assets/img/notes.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -382,6 +381,7 @@ body {
 }
 .portfolio-menu button {
   border: none;
+  border-radius: 3px;
   padding: 5px;
   margin: 10px;
   background-color: var(--portfolio-nav-bg-color);
@@ -398,35 +398,6 @@ body {
 }
 /** Fin de portfolio */
 
-/**
- * The following styles are for the reviews section
- */
-/* The CSS for the reviews section. */
-/**
-.tns-nav {
-  text-align: center;
-}
-.tns-controls {
-  display: none;
-}
-.tns-nav button {
-  background-color: rgb(0, 0, 0);
-  border: none;
-  padding: 5px;
-  margin: 5px 5px 15px 5px;
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--text-color);
-  transition: all 0.4s;
-  cursor: pointer;
-  border-radius: 50%;
-}
-.tns-nav .tns-nav-active {
-  background-color: var(--text-color);
-  color: white;
-}
-**/
-/* Footer */
 .footer {
   background: var(--footer-bg);
   padding: 20px 0;
@@ -464,13 +435,15 @@ body {
 /* Fin footer */
 
 .navbar-menu ul li:nth-child(6) a {
-  color: black;
-  background-color: rgb(221, 221, 0);
+  color: var(--title-color);
+  background-color: var(--call-btn-color);
   padding: 8px;
   border: none;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  /*
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);*/
   display: block;
+  font-weight: bold;
 }
 
 .dark-mode-controls {
@@ -523,9 +496,6 @@ svg.moon {
   body:not(.force-light) {
     --bg-color: #0d1b1e;
     --main-color: #0b3c49;
-    --accent-color: Purple;
-    --secondary-text-color: Lavender;
-    --main-text-color: AliceBlue;
     --sun-color: #faea48;
   }
 }
@@ -533,15 +503,12 @@ svg.moon {
 body.force-dark {
   --bg-color: #0d1b1e;
   --main-color: #0b3c49;
-  --accent-color: Purple;
-  --secondary-text-color: Lavender;
-  --main-text-color: AliceBlue;
+  --accent-color: var(--moon-color);
   --sun-color: #faea48;
-
   --text-color: white; /**About, Services**/
   --title-color: white; /**About, Services**/
   --nav-top-color: var(--bg-color);
-  --services-card-color: gray;
+  --services-card-color: white;
   --portfolio-nav-bg-color: var(--services-card-color);
   --portfolio-footer-bg-color: var(--bg-color);
   --portfolio-text-color: AliceBlue;
@@ -549,12 +516,12 @@ body.force-dark {
     0px 2px 10px 0px rgba(0, 0, 0, 0.12);
   --portfolio-card-title-color: AliceBlue;
   --footer-bg: var(--bg-color);
+  --call-btn-color: var(--bg-color);
 }
 
 @media (max-width: 425px) {
   .navbar-menu ul li:nth-child(6) a {
-    background: transparent;
-    box-shadow: none;
+   
   }
 }
 
@@ -568,6 +535,6 @@ body.force-dark {
   }
 
   .navbar-top {
-    display: block;
+    /*display: block;*/
   }
 }
